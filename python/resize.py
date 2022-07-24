@@ -1,4 +1,6 @@
+
 import os
+import math
 from PIL import Image
 import json
 
@@ -23,5 +25,8 @@ for file in os.listdir("images"):
 
     input_file = os.path.join('images', file)
     im = Image.open(input_file)
-    im1 = im.crop((left, top, right, bottom))
+    im1 = im.crop((left, top+5, right, bottom))
+    size = im1.size
+    # resize the image to 1000 width
+    im1 = im1.resize((1500,math.floor(size[1]/size[0]*1500)),Image.ANTIALIAS)
     im1.save(os.path.join('output', file))
