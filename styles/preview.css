@@ -28,6 +28,57 @@
   }
 }
 
+body {
+  position: relative;
+}
+
+.modal {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal h1 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-style: italic;
+}
+
+.modal .bar {
+  margin-top: 1rem;
+  height: 5px;
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background: #eee;
+}
+
+.modal .bar .inner-bar {
+  height: 5px;
+  width: 0;
+  background-color: black;
+  -webkit-transition: 0.1s linear;
+  transition: 0.1s linear;
+}
+
 @media only screen and (max-width: 480px) {
   .images {
     width: 100%;

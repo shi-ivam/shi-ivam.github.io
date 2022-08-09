@@ -45,10 +45,12 @@
             </div>
         </div>
         <div class=" mx-auto flex flex-row items-center justify-center w-full py-32 text-xl">
-            <a href="https://deblofer-public.vercel.app" class="mx-2 bg-cyan-400 py-2 px-6 text-white duration-300 hover:drop-shadow-lg">
-                View
+            <a href="#" onclick="#"
+                class="mx-2 bg-cyan-500 py-2 px-6 text-white duration-300 hover:drop-shadow-lg opacity-25">
+                In Development  
             </a>
-            <a href="#" class="mx-2 bg-white border-2 py-2 px-5 text-black duration-300  text-xl hover:drop-shadow-lg  opacity-25">
+            <a href="#"
+                class="mx-2 bg-white border-2 py-2 px-5 text-black duration-300  text-xl hover:drop-shadow-lg  opacity-25">
                 Source Code
             </a>
         </div>
@@ -70,6 +72,39 @@
             </h1>
         </div>
     </div>
+    <div class="modal">
+        <h1>
+            App might take 20 seconds to load.
+        </h1>
+        <div class="bar">
+            <div class="inner-bar"></div>
+        </div>
+    </div>
+    <script>
+        function openUrl() {
+            let total_time = 3;
+
+            document.querySelector('.modal').style.display = 'flex';
+            const url = "https://deblofer-public.vercel.app";
+
+            // axios.get('')
+
+            const elem = document.querySelector('.bar .inner-bar');
+            let count = 0;
+            let stepSize = 5; //in ms
+            const no_of_steps = (1000 / stepSize) * total_time;
+            const myInterval = setInterval(() => {
+                count = count + 1;
+                const percent = count / no_of_steps;
+                elem.style.width = percent * 100 + '%';
+                if (count == no_of_steps) {
+                    clearInterval(myInterval);
+                    document.querySelector('.modal').style.display = 'none';
+                    window.open(url, '_blank');
+                }
+            }, stepSize);
+        }
+    </script>
 </body>
 
 </html>
