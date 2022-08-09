@@ -43,6 +43,10 @@ video {
     width: auto;
     max-width: 100%;
     height: auto;
+    .btns{
+        margin-top: 3rem !important;
+        
+    }
 }
 
 .main h2 {
@@ -78,6 +82,8 @@ video {
     position: relative;
     z-index: 0;
     transition: 0.4s ease-in-out;
+    // margin-top: 3rem !important;
+    
     &::after {
         content: "";
         position: absolute;
@@ -244,6 +250,7 @@ section.fourth {
     }
     .main .btns{
             margin-top: 20px;
+            max-width: 400px;
     }
     .main a{
             border:0;
@@ -252,6 +259,11 @@ section.fourth {
             padding: 0;
             color:black;
             padding-bottom: 5px;
+            &:hover{
+                &::after{
+                    width: 200px;
+                }
+            }
             &::after{
                     width: 50%;
                     left:50%;
@@ -266,6 +278,9 @@ section.fourth {
     .main p {
         font-size: 1.5rem;
     }
+    .main .btns a{
+        color:black;
+    }
     .tags {
         flex-direction: column !important;
         justify-content: center;
@@ -277,7 +292,7 @@ section.fourth {
     }
     .btns {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         column-gap: 10px;
     }
     section.second .projects .project .proj .btns {

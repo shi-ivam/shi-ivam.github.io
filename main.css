@@ -45,6 +45,10 @@ video {
   height: auto;
 }
 
+.main .btns {
+  margin-top: 3rem !important;
+}
+
 .main h2 {
   max-width: 100%;
   line-height: 1em;
@@ -321,6 +325,7 @@ section.fourth .contact .con:hover {
   }
   .main .btns {
     margin-top: 20px;
+    max-width: 400px;
   }
   .main a {
     border: 0;
@@ -329,6 +334,9 @@ section.fourth .contact .con:hover {
     padding: 0;
     color: black;
     padding-bottom: 5px;
+  }
+  .main a:hover::after {
+    width: 200px;
   }
   .main a::after {
     width: 50%;
@@ -342,6 +350,9 @@ section.fourth .contact .con:hover {
   }
   .main p {
     font-size: 1.5rem;
+  }
+  .main .btns a {
+    color: black;
   }
   .tags {
     -webkit-box-orient: vertical !important;
@@ -360,8 +371,8 @@ section.fourth .contact .con:hover {
   .btns {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
     -webkit-column-gap: 10px;
             column-gap: 10px;
   }
